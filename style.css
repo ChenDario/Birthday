@@ -32,50 +32,59 @@ h1 {
 }
 
 /* Modifiche a style.css */
-/* Aggiungi media query per mobile */
+/* Aggiungi queste regole in fondo al file */
+
 @media (max-width: 768px) {
     body {
         padding: 20px;
         min-height: 100vh;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     }
-    
+
     .container {
-        padding: 15px;
-        margin: 10px auto;
         width: 95%;
+        padding: 20px;
+        margin: 10px auto;
     }
-    
+
     h1 {
-        font-size: 2em;
-        line-height: 1.3;
+        font-size: 1.8em;
+        margin-bottom: 15px;
     }
-    
+
     .cake {
         font-size: 40px;
-        margin: 10px 0;
+        margin: 15px;
     }
-    
+
+    img {
+        max-width: 80%;
+        height: auto;
+    }
+
     #countdown {
         font-size: 1em;
-        line-height: 1.5;
         padding: 8px;
     }
-    
-    img {
-        width: 90%;
-        margin: 10px 0;
-    }
-    
-    p {
-        font-size: 0.9em;
-        line-height: 1.4;
-    }
-}
 
-/* Aggiungi questo per migliorare la leggibilità */
-#countdown {
-    white-space: pre-line;
-    word-break: keep-all;
+    /* Messaggio per landscape */
+    @media (orientation: landscape) {
+        body::before {
+            content: "请将设备旋转至竖屏观看";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: #e74c3c;
+        }
+    }
 }
