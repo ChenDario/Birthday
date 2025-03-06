@@ -11,10 +11,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     margin: 20px auto;
-    max-width: 80%px;
+    max-width: 80%;
 }
-
-/* Aggiungi queste regole CSS dopo lo stile del .container */
 
 .text {
     font-size: 2em;
@@ -29,14 +27,19 @@ body {
     display: inline-block;
 }
 
+.cake {
+    font-size: 60px;
+    margin: 20px;
+    animation: bounce 1s infinite;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Aggiungi sotto le regole esistenti del container */
 .birthday-img {
-    width: 80%; /* Dimensione aumentata da 300px */
+    width: 80%;
     height: auto;
     border-radius: 10px;
     margin: 20px auto;
@@ -49,10 +52,9 @@ body {
     transform: scale(1.02);
 }
 
-/* Modifica la media query mobile */
 @media (max-width: 768px) {
     .birthday-img {
-        width: 320px; /* Dimensione leggermente aumentata anche per mobile */
+        width: 320px;
         margin: 15px auto;
     }
 
@@ -77,19 +79,14 @@ body {
     }
 
     .cake {
-        font-size: 40px;
+        font-size: 1em;
         margin: 15px;
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Messaggio per landscape */
-    @media (orientation: landscape) {
+    /* Messaggio per portrait */
+    @media (orientation: portrait) {
         body::before {
-            content: "请将设备旋转至竖屏观看";
+            content: "请将设备旋转至横屏观看";
             position: fixed;
             top: 0;
             left: 0;
@@ -103,14 +100,10 @@ body {
             font-size: 1.5em;
             color: #e74c3c;
         }
+        .container {
+            display: none;
+        }
     }
-    
-}
-
-.cake {
-    font-size: 60px;
-    margin: 20px;
-    animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
