@@ -83,25 +83,19 @@ body {
         margin: 15px;
     }
 
-    /* Messaggio per portrait */
-    @media (orientation: portrait) {
-        body::before {
-            content: "请将设备旋转至横屏观看";
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: white;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5em;
-            color: #e74c3c;
-        }
+    /* Aggiungi questo per migliorare la visualizzazione mobile */
+    @media (max-width: 768px) {
         .container {
-            display: none;
+            max-width: 95%;
+            padding: 15px;
+        }
+        
+        .birthday-img {
+            width: 95%;
+        }
+        
+        .text {
+            font-size: 1.2em;
         }
     }
 }
