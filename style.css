@@ -54,7 +54,7 @@ body {
 
 @media (max-width: 768px) {
     .birthday-img {
-        width: 320px;
+        width: 80%;
         margin: 15px auto;
     }
 
@@ -79,7 +79,7 @@ body {
     }
 
     .cake {
-        font-size: 1em;
+        font-size: 1.5em;
         margin: 15px;
     }
 
