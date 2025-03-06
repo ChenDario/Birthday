@@ -1,0 +1,32 @@
+body {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    text-align: center;
+    font-family: 'Microsoft Yahei', sans-serif;
+    padding: 50px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+h1 {
+    color: #e74c3c;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cake {
+    font-size: 60px;
+    margin: 20px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
