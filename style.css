@@ -28,7 +28,7 @@ body {
 }
 
 .cake {
-    font-size: 60px;
+    font-size: 2em;
     margin: 20px;
     animation: bounce 1s infinite;
 }
@@ -79,7 +79,7 @@ body {
     }
 
     .cake {
-        font-size: 1em;
+        font-size: 1.5em;
         margin: 15px;
     }
 
