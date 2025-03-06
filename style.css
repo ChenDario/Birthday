@@ -11,30 +11,57 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     margin: 20px auto;
-    max-width: 600px;
+    max-width: 80%px;
 }
 
-h1 {
-    color: #e74c3c;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+/* Aggiungi queste regole CSS dopo lo stile del .container */
+
+.text {
+    font-size: 2em;
+    color: #2c3e50;
+    line-height: 1.8;
+    margin: 25px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-family: 'Microsoft Yahei', 'SimSun', sans-serif;
+    animation: fadeIn 1.5s ease-out;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
 }
 
-.cake {
-    font-size: 60px;
-    margin: 20px;
-    animation: bounce 1s infinite;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+/* Aggiungi sotto le regole esistenti del container */
+.birthday-img {
+    width: 80%; /* Dimensione aumentata da 300px */
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Modifiche a style.css */
-/* Aggiungi queste regole in fondo al file */
+.birthday-img:hover {
+    transform: scale(1.02);
+}
 
+/* Modifica la media query mobile */
 @media (max-width: 768px) {
+    .birthday-img {
+        width: 320px; /* Dimensione leggermente aumentata anche per mobile */
+        margin: 15px auto;
+    }
+
+    .text {
+        font-size: 1.1em;
+        margin: 15px 0;
+        padding: 10px;
+    }
+
     body {
         padding: 20px;
         min-height: 100vh;
@@ -49,24 +76,14 @@ h1 {
         margin: 10px auto;
     }
 
-    h1 {
-        font-size: 1.8em;
-        margin-bottom: 15px;
-    }
-
     .cake {
         font-size: 40px;
         margin: 15px;
     }
 
     img {
-        max-width: 80%;
+        max-width: 100%;
         height: auto;
-    }
-
-    #countdown {
-        font-size: 1em;
-        padding: 8px;
     }
 
     /* Messaggio per landscape */
@@ -87,4 +104,16 @@ h1 {
             color: #e74c3c;
         }
     }
+    
+}
+
+.cake {
+    font-size: 60px;
+    margin: 20px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
 }
